@@ -1,0 +1,138 @@
+.container {
+  margin: 0 auto;
+  width: 1150px;
+}
+.data-size-block{
+  text-align: center;
+  padding-top: 100px;
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  animation: addMount ease-in-out 0.5s;
+  
+  & h4{
+    color:#343a40;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  &__btn{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+  }
+    &__btn-item{
+      width: 60%;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      transition: all .3s;
+      &:hover{
+        transform: scale(1.1);
+      }
+    } 
+}
+
+.table-wrapper {
+  padding-top: 20px;
+  position: relative;
+}
+.table{
+  & tr{
+    cursor: pointer;
+    & :hover{
+      background-color: lightgray;
+    }
+  }
+}
+.th-title {
+  cursor: pointer;
+}
+
+.pagination {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1100px;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.pagination-item {
+  & a {
+    color: #343a40;
+  }
+}
+.search-and-add{
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+.serch-form{
+  width: 700px;
+}
+
+.user-details--hide{
+display: none;
+}
+
+.add-user-form{
+  width: 400px;
+  height: 350px;
+  background-color: #343a40;
+  position: absolute;
+  top: 130px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  animation: addMount ease-in-out 0.5s;
+  padding: 0 15px;
+
+  &__form-add-btn{
+    margin-bottom: 15px;
+ }
+  &__form-hide-btn{
+    color: white;
+ }
+&_row{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+}
+.form-controller{
+  position: relative;
+  & label{
+    position: absolute;
+    color: white;
+    bottom: 20px;
+    left: 5px;
+  }
+}
+.phone{
+  margin-bottom: 35px;
+}
+.error-message-text{
+  position: absolute;
+  top: 25px;
+  left: 5px;
+  color: tomato;
+}
+
+@keyframes addMount {
+  0% {
+    transform: perspective(500px) rotateX(90deg);
+  }
+  100% {
+    transform: perspective(500px) rotateX(0deg);
+  }
+}
